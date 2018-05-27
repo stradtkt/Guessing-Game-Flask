@@ -5,7 +5,7 @@ app.secret_key = "Keepthisasecret"
 
 @app.route('/')
 def index():
-  session['number'] = random.randint(0, 100)
+  session['number'] = random.randint(0, 10)
   return render_template('index.html')
 
 @app.route('/guess', methods=['POST'])

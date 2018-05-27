@@ -26,6 +26,9 @@
       <div class="col-md-8 offset-2">
         {% if answer == "Correct"  %}
           <p class="correct">{{answer}}! {{session['number']}} is the right number!</p>
+          <form action="/">
+            <input class="btn btn-success btn-lg" type="submit" value="Play Again?">
+          </form>
         {% elif answer == "Too High" %}
           <p class="high">{{answer}}</p>
         {% elif answer == "Too Low" %}
